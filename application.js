@@ -48,7 +48,7 @@ var parse = function(){
     person["days"] = parseDays(values[2]);
     person["daysnum"] = parseInt(values[3]);
     count += parseInt(values[3]);
-    person["drive"] = values[4] == "True";
+    person["drive"] = values[4] == "Yes";
     for(var j = 0; j < person["daysnum"]; j++){
       input.push(person);
     }
@@ -384,69 +384,3 @@ var display = function(){
   }
   main.innerHTML = html;
 }
-
-// var hasCars = function(center, day){
-//   var cars = 0;
-//   var total = schedule[center][day].length;
-//   for(var person in schedule[center][day]){
-//     if(schedule[center][day][person].drive){
-//       cars++;
-//     }
-//   }
-//   if(cars * 4 >= total){
-//     return true;
-//   } else{
-//     return false;
-//   }
-// }
-
-
-// var main = function(){
-//   recurse();
-//   display();
-//   console.log(recur);
-// }
-// var recur = 0;
-// var recurse = function(){
-//   recur++;
-//   // console.log(schedule);
-//   // console.log('here');
-//   for(var i = 0; i < input.length; i++){
-//     if(!added[i]){
-//       var person = input[i];
-//       var addedTo = [];
-//       var match = false;
-//       for(var center in schedule){
-//         for(var day in schedule[center]){
-//             var canAdd = canBeAdded(person, center, day);
-//             if(canAdd){
-//               addPerson(person, center, day);
-//               added[i] = true;
-//               var success = recurse();
-//               if(success){
-//                 return true;
-//                 match = true;
-//                 break;
-//               } else{
-//                 removePerson(center, day);
-//                 added[i] = false;
-//               }
-//             }
-//         }
-//         if(match)
-//           break;
-//       }
-//     }
-//   }
-//   var cnt = 0;
-//   for(var i = 0 ; i<added.length; i++){
-//     if(added[i] == false)
-//       cnt++;
-//   }
-//   console.log(cnt);
-//   if(cnt > 0){
-//     return false;
-//   }
-//   console.log(schedule);
-//   return true;
-// }
