@@ -324,7 +324,7 @@ var canBeAdded = function(personI, center, day){
     return false;
   }
 
-  var maxPerDay = Math.floor(input.length/25);
+  var maxPerDay = Math.floor(input.length/20);
   // || schedule[center][day].length > minScheduledNum()
   if(schedule[center][day].length > maxPerDay ){
     return false;
